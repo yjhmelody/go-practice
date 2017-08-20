@@ -5,15 +5,14 @@ import (
 	"math"
 )
 
-
-func main(){
+func main() {
 	var x uint8 = 1<<1 | 1<<5
 	var y uint8 = 1<<1 | 1<<2
-	fmt.Printf("%08b\n",x)
-	fmt.Printf("%08b\n",y)
+	fmt.Printf("%08b\n", x)
+	fmt.Printf("%08b\n", y)
 
 	medals := []string{"gold", "silver", "bronze"}
-	for i := len(medals) - 1; i >= 0; i--{
+	for i := len(medals) - 1; i >= 0; i-- {
 		fmt.Println(medals[i])
 	}
 
@@ -24,7 +23,7 @@ func main(){
 	o := int64(0666)
 	// 重复使用第一个操作数
 	fmt.Printf("%d %[1]o %#[1]o %T\n", o, o)
-	var f  float32 = 1 << 24
+	var f float32 = 1 << 24
 	// 最大
 	fmt.Println(f == f+1)
 
@@ -36,10 +35,10 @@ func main(){
 	fmt.Printf("%T\n", 1+2i)
 
 	var boolA int = 1
-	if boolA == 1{
+	if boolA == 1 {
 		fmt.Println(boolA)
 	}
-	
+
 	var str string = "hello \u4e16\u754c"
 	var hello = str[:5]
 	var world = str[6:]
@@ -57,9 +56,9 @@ func main(){
 
 	const (
 		deadbeef = 0xdeadbeef
-		a = uint32(deadbeef)
-		b = float32(deadbeef)
-		c = float64(deadbeef)
+		a        = uint32(deadbeef)
+		b        = float32(deadbeef)
+		c        = float64(deadbeef)
 		// error
 		d = int32(deadbeef)
 		e = float32(deadbeef)
@@ -67,8 +66,7 @@ func main(){
 	)
 }
 
-
-func HasPrefix(s, prefix string) bool{
+func HasPrefix(s, prefix string) bool {
 	return len(s) >= len(prefix) && s[:len(prefix)] == prefix
 }
 
